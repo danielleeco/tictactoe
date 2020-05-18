@@ -93,5 +93,5 @@ def tap(player, i, j):
         for j in range(len(field[i])):
             if field[i][j] == '':
                 count_null += 1
-    if count_null == len(field) * len(field[0]):
+    if count_null == 0:
         is_over = True
