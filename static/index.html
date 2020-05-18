@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title> Krests </title>
+  <link rel="stylesheet" href="./static/style.css">
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+<div class="grid-container" id="game">
+  <div class="board">
+    <template v-for="(row, row_index) in board">
+      <div class="cell" 
+           v-for="(item, column_index) in row" 
+           v-on:click="tap" 
+           v-bind:data-row="row_index" 
+           v-bind:data-column="column_index"> 
+        <div> 
+          {{item}} 
+        </div> 
+      </div>
+    </template>
+  </div>
+
+  <div class="info"> {{message}} <br> You are - {{you}} </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script>
+  <script src="./static/script.js"></script>
+
+</body>
+</html>

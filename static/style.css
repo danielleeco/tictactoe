@@ -1,0 +1,69 @@
+html, body, .grid-container { 
+  /* height: 100%;  */
+  height: 100vmin;
+  width: 100vmin;
+  background-color: #363331;
+  margin: auto; 
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". . . . ." 
+                       ". board board board ." 
+                       ". board board board ." 
+                       ". board board board ." 
+                       ". info info info ." 
+                       ". . . . .";
+  background-color: #363331;
+/*   border: 2px solid white; */
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1px 1px;
+  /* grid-template-areas: ". . ." ". . ." ". . ."; */
+  grid-area: board;
+}
+
+/* .board >  */
+.cell {
+  border: 1px solid white;
+  background-color: #000000c9;
+  height: 100%;
+  color: #aeaeae;
+  
+  display: flex;
+  font-size: xx-large;
+}
+
+.cell > div {
+  margin: auto;
+/*   font-size: xx-large; */
+  font-size: 3em; /*  размер крестовноликов */
+  user-select: none;
+}
+
+.info { 
+  grid-area: info; 
+  font-size: 3em;
+  color: #bbb;
+  margin: auto;
+}
+
+/* For presentation only, no need to copy the code below */
+/* .grid-container * { 
+ border: 1px solid red;
+ position: relative;
+}
+
+.grid-container *:after { 
+ content:attr(class);
+ position: absolute;
+ top: 0;
+ left: 0;
+} */
